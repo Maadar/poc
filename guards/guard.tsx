@@ -5,7 +5,6 @@ import { PropsWithChildren } from 'react';
 const Guard = ({ children }: PropsWithChildren<{}>) => {
   const auth = useAuth();
   const router = useRouter();
-  console.log({auth});
 
   if (!auth.userData && !auth.isLoading) {
     router.push("/");

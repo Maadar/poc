@@ -6,7 +6,8 @@ import { useRouter } from 'next/router';
 const oidcConfig = {
   authority: "https://go.uphellas.gr/auth/realms/pheme/.well-known/openid-configuration",
   redirectUri: "http://localhost:3000/dashboard/",
-  responseType: 'access_token',
+  responseType: 'id_token token',
+  scope: "openid profile roles",
   clientId: "next-client",
 };
 
